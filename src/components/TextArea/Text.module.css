@@ -1,0 +1,18 @@
+.text {
+  color: #484a6a;
+  line-height: 161.1%;
+  font-weight: 600;
+  font-size: 32px;
+  font-family: 'Montserrat';
+  justify-self: flex-start;
+}
+
+.textArea {
+  color: #9598b1;
+  line-height: 134%;
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: 14px;
+  width: 500px;
+  height: 95px;
+}
