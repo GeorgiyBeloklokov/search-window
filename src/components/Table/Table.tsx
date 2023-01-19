@@ -2,50 +2,51 @@ import {
   Table,
   Thead,
   Tbody,
-  Tfoot,
   Tr,
   Th,
   Td,
-  TableCaption,
   TableContainer,
 } from "@chakra-ui/react";
+import { TABLE } from "../../common/constants";
+import { IItems } from "../../common/types";
+import style from "./Table.module.css";
 
-export function TableOfItems() {
+export function TableOfItems({ items }: { items: IItems[] }) {
   return (
-    <TableContainer>
+    <TableContainer
+      overflowY={"auto"}
+      height="fit-content"
+      backgroundColor={"#FFFFFF"}
+      marginTop="40px"
+      maxHeight="48vh"
+    >
       <Table variant="simple">
-       {/*  <TableCaption>Imperial to metric conversion factors</TableCaption> */}
-        <Thead>
+        <Thead backgroundColor="#FFFFFF" top="0.1px" position="sticky">
           <Tr>
-            <Th>To convert</Th>
-            <Th>into</Th>
-            <Th isNumeric>multiply by</Th>
+            <Th className={style.th}>{TABLE.indexItem}</Th>
+            <Th className={style.th}>{TABLE.id}</Th>
+            <Th className={style.th}>{TABLE.articul}</Th>
+            <Th className={style.th}>{TABLE.name}</Th>
+            <Th className={style.th}>{TABLE.brand}</Th>
+            <Th className={style.th}>{TABLE.price}</Th>
+            <Th className={style.th}>{TABLE.quantity}</Th>
           </Tr>
         </Thead>
         <Tbody>
-          <Tr>
-            <Td>inches</Td>
-            <Td>millimetres (mm)</Td>
-            <Td isNumeric>25.4</Td>
-          </Tr>
-          <Tr>
-            <Td>feet</Td>
-            <Td>centimetres (cm)</Td>
-            <Td isNumeric>30.48</Td>
-          </Tr>
-          <Tr>
-            <Td>yards</Td>
-            <Td>metres (m)</Td>
-            <Td isNumeric>0.91444</Td>
-          </Tr>
+          {items.map((item, index) => {
+            return (
+              <Tr key={item.id}>
+                <Td className={style.th}>{index + 1}</Td>
+                <Td className={style.th}>{item.id}</Td>
+                <Td className={style.th}>{item.article}</Td>
+                <Td className={style.th}>{item.name}</Td>
+                <Td className={style.th}>{item.brand.name}</Td>
+                <Td className={style.th}>{item.price}</Td>
+                <Td className={style.th}>{item.quantity}</Td>
+              </Tr>
+            );
+          })}
         </Tbody>
-        <Tfoot>
-          <Tr>
-            <Th>To convert</Th>
-            <Th>into</Th>
-            <Th isNumeric>multiply by</Th>
-          </Tr>
-        </Tfoot>
       </Table>
     </TableContainer>
   );
