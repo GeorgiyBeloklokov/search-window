@@ -42,7 +42,7 @@ export const App = () => {
         overflow={"hidden"}
         backgroundColor={"#F5F4F6"}
       >
-        <Grid minH="100vh" p={"60px"}>
+        <Box minH="100vh" p={"60px"}>
           <Box
             display="flex"
             flexDirection="column"
@@ -68,7 +68,7 @@ export const App = () => {
             </Button>
           </Box>
           <TableOfItems items={items} />
-        </Grid>
+        </Box>
       </Box>
     </ChakraProvider>
   );
