@@ -1,13 +1,7 @@
-import {
-  Alert,
-  AlertDescription,
-  AlertIcon,
-  Text,
-  Textarea,
-} from "@chakra-ui/react";
-import { ChangeEvent } from "react";
-import { SERVICE } from "../../common/constants";
-import style from "./Text.module.css";
+import { Alert, AlertDescription, AlertIcon, Text, Textarea } from '@chakra-ui/react';
+import { ChangeEvent } from 'react';
+import { SERVICE } from '../../common/constants';
+import style from './Text.module.css';
 
 export function TextArea({
   value,
@@ -18,9 +12,7 @@ export function TextArea({
   setValue: (arg0: string) => void;
   error: string;
 }) {
-  let handleInputChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
+  let handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     let inputValue = e.target.value;
     setValue(inputValue);
   };
@@ -34,8 +26,8 @@ export function TextArea({
         <Alert borderRadius={5} status="error">
           <AlertIcon />
           <AlertDescription
-            lineHeight={"18,76px"}
-            fontFamily={"Montserrat"}
+            lineHeight={'18,76px'}
+            fontFamily={'Montserrat'}
             fontWeight={400}
             fontSize={14}
           >

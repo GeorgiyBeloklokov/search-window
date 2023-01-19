@@ -1,22 +1,14 @@
-import {
-  Table,
-  Thead,
-  Tbody,
-  Tr,
-  Th,
-  Td,
-  TableContainer,
-} from "@chakra-ui/react";
-import { TABLE } from "../../common/constants";
-import { IItems } from "../../common/types";
-import style from "./Table.module.css";
+import { Table, Thead, Tbody, Tr, Th, Td, TableContainer } from '@chakra-ui/react';
+import { TABLE } from '../../common/constants';
+import { IItems } from '../../common/types';
+import style from './Table.module.css';
 
 export function TableOfItems({ items }: { items: IItems[] }) {
   return (
     <TableContainer
-      overflowY={"auto"}
+      overflowY={'auto'}
       height="fit-content"
-      backgroundColor={"#FFFFFF"}
+      backgroundColor={'#FFFFFF'}
       marginTop="40px"
       maxHeight="48vh"
     >

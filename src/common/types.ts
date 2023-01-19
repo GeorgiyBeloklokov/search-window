@@ -11,5 +11,5 @@ export interface IItems {
 }
 
 export interface IRequest {
-    searchArticles: string[]
+  searchArticles: string[];
 }
