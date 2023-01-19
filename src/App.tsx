@@ -1,4 +1,4 @@
-import { Box, Button, ChakraProvider, Grid, theme } from "@chakra-ui/react";
+import { Box, Button, ChakraProvider, theme } from "@chakra-ui/react";
 import { AxiosError } from "axios";
 import { useState } from "react";
 import { ApiService } from "./Api/ApiService";

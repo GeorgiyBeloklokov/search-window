@@ -1,4 +1,5 @@
 import axios from "axios";
+import { IRequest } from "../common/types";
 
 const instance = axios.create({
   withCredentials: false,
@@ -10,7 +11,7 @@ instance.interceptors.request.use((config) => {
 });
 
 export const ApiService = {
-  async searchArticles(searchArticles: any) {
+  async searchArticles(searchArticles: IRequest) {
     return instance
       .post("https://germsp.ru/test-search-products", searchArticles)
       .then((response) => {
